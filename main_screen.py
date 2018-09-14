@@ -1,34 +1,34 @@
 import pygame
-from dot import Dot
+from population import Population
 from game_consts import *
 
 def start():
-    pygame.init()
-    check_me = Dot(300,300)
+    population = Population()
 
+    generation_count = 1
+    stop = False
+    pygame.init()
     clock = pygame.time.Clock()
     screen = pygame.display.set_mode(BACKGROUND_SIZE)
-    screen.fill(BACKGROUND_COLOR)
-    pygame.draw.rect(screen, DOT_COLOR, [check_me.position.x, check_me.position.y, DOT_HEIGHT, DOT_WIDTH])
-    pygame.display.update()
 
-    stop = False
     while not stop:
-        check_me.move()
-        check_me.update()
-
-        if check_me.is_dead:
-            stop = True
-
-       # for event in pygame.event.get():
-       #     if event.type == pygame.QUIT:
-       #         stop = True
-       #     print(event)
 
         screen.fill(BACKGROUND_COLOR)
-        check_me.show(screen)
+        pygame.draw.rect(screen, TARGET_COLOR, [TARGET_POINT.x, TARGET_POINT.y, DOT_HEIGHT, DOT_WIDTH])
+        population.show(screen)
         pygame.display.update()
         clock.tick(60)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                stop = True
+
+        population.move_and_update()
+        if population.is_extinct():
+            print("Generation: {}".format(generation_count))
+            generation_count += 1
+            population.generate_new_population()
+
 
     pygame.quit()
 

@@ -1,6 +1,5 @@
 from vectors_util import *
-import random
-import math
+
 
 class Brain:
     def __init__(self, max_steps):
@@ -10,6 +9,6 @@ class Brain:
 
     def initial_vectors(self):
         for i in range(self.max_steps):
-            acceleration = Vector((random.random() - 0.5) * 5, (random.random() - 0.5) * 5)
+            acceleration = get_random_direction_vector()
             self.directions.append(acceleration)
 
