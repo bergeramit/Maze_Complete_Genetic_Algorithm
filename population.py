@@ -3,8 +3,6 @@ import random
 from game_consts import *
 
 
-
-
 class Population:
     def __init__(self):
         self.dots = []
@@ -14,19 +12,19 @@ class Population:
 
 
     def show(self, screen):
-        for i in range(1, SIZE_OF_POPULATION):
+        for i in range(1, len(self.dots)):
             self.dots[i].show(screen)
         self.dots[0].show(screen, BEST_DOT_COLOR)
 
 
     def move_and_update(self):
-        for i in range(SIZE_OF_POPULATION):
+        for i in range(len(self.dots)):
             self.dots[i].move()
             self.dots[i].update()
 
 
     def is_extinct(self):
-        for i in range(SIZE_OF_POPULATION):
+        for i in range(len(self.dots)):
             if not self.dots[i].is_dead:
                 return False
         return True
@@ -42,7 +40,7 @@ class Population:
 
 
     def calculate_fitness(self):
-        for i in range(SIZE_OF_POPULATION):
+        for i in range(len(self.dots)):
             self.dots[i].calculate_fitness()
         self.dots.sort(key=get_fitness, reverse=True)
 
@@ -61,7 +59,7 @@ class Population:
                     break
                 place -= self.old_dots[i].fitness
 
-            print("sum: {} place: {} index: {}".format(str(sum_of_fitness), str(place), str(index)))
+            #print("sum: {} place: {} index: {}".format(str(sum_of_fitness), str(place), str(index)))
 
             self.dots.append(Dot(DOT_START_X_POSITION, DOT_START_Y_POSITION))
             self.clone_end_dot(self.old_dots[index])
@@ -71,12 +69,12 @@ class Population:
 
 
     def mutate(self):
-        for i in range(ELITE_NUMBER, SIZE_OF_POPULATION):
+        for i in range(ELITE_NUMBER, len(self.dots)):
             self.dots[i].mutate()
 
 
     def revive(self):
-        for i in range(SIZE_OF_POPULATION):
+        for i in range(len(self.dots)):
             self.dots[i].revive()
 
 

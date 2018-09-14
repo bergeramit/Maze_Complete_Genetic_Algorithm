@@ -50,8 +50,12 @@ class Dot:
 
 
     def calculate_fitness(self):
-        self.fitness = ((1 / self.position.calculate_distance(TARGET_POINT)) + (1 / self.step)) * 10
-        self.fitness += 100 if self.is_arrived() else 0
+        if self.is_arrived():
+            self.fitness = (1 + (100 / self.step)) * 10
+        else:
+            #print("Distances: {}".format(self.position.calculate_distance(TARGET_POINT)))
+            self.fitness = ((1 / self.position.calculate_distance(TARGET_POINT)) + (100 / self.step)) * 10
+
 
 
     def mutate(self):
