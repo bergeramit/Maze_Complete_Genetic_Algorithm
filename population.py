@@ -3,12 +3,16 @@ import random
 from game_consts import *
 
 
+MAX_STEPS = 100
+
+
 class Population:
     def __init__(self):
+        self.generation = 0
         self.dots = []
         self.old_dots = []
         for i in range(SIZE_OF_POPULATION):
-            self.dots.append(Dot(DOT_START_X_POSITION, DOT_START_Y_POSITION))
+            self.dots.append(Dot(DOT_START_X_POSITION, DOT_START_Y_POSITION, MAX_STEPS))
 
 
     def show(self, screen):
@@ -61,7 +65,7 @@ class Population:
 
             #print("sum: {} place: {} index: {}".format(str(sum_of_fitness), str(place), str(index)))
 
-            self.dots.append(Dot(DOT_START_X_POSITION, DOT_START_Y_POSITION))
+            self.dots.append(Dot(DOT_START_X_POSITION, DOT_START_Y_POSITION, MAX_STEPS))
             self.clone_end_dot(self.old_dots[index])
             #self.dots[-1] = self.old_dots[index]
             #clone_dot(self.dots[-1], self.old_dots[index])
@@ -78,7 +82,17 @@ class Population:
             self.dots[i].revive()
 
 
+    def add_steps(self):
+        for i in range(len(self.dots)):
+            self.dots[i].add_steps(MAX_STEPS)
+
+
     def generate_new_population(self):
+        global MAX_STEPS
+        self.generation += 1
+        if self.generation == 7:
+            MAX_STEPS += 100
+        self.add_steps()
         # Calculate the fitness
         self.calculate_fitness()
         # only mate with the top 50%

@@ -2,6 +2,12 @@ import pygame
 from population import Population
 from game_consts import *
 
+
+def draw_terrain(screen):
+    for name, terrain in TERRAIN.items():
+        pygame.draw.rect(screen, terrain.color, [terrain.position.x, terrain.position.y, terrain.height, terrain.width])
+
+
 def start():
     population = Population()
 
@@ -14,7 +20,7 @@ def start():
     while not stop:
 
         screen.fill(BACKGROUND_COLOR)
-        pygame.draw.rect(screen, TARGET_COLOR, [TARGET_POINT.x, TARGET_POINT.y, DOT_HEIGHT, DOT_WIDTH])
+        draw_terrain(screen)
         population.show(screen)
         pygame.display.update()
         clock.tick(60)
