@@ -90,7 +90,7 @@ class Population:
     def generate_new_population(self):
         global MAX_STEPS
         self.generation += 1
-        if self.generation == 7:
+        if self.generation % 7 == 0:
             MAX_STEPS += 100
         self.add_steps()
         # Calculate the fitness

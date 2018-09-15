@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c0e95d0-5a65-48ec-b1dd-408951b2cd67" name="Default" comment="kk">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/terrain.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dot.py" afterPath="$PROJECT_DIR$/dot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game_consts.py" afterPath="$PROJECT_DIR$/game_consts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_screen.py" afterPath="$PROJECT_DIR$/main_screen.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/population.py" afterPath="$PROJECT_DIR$/population.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vectors_util.py" afterPath="$PROJECT_DIR$/vectors_util.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="population.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="population.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/population.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
-              <caret line="92" column="30" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+              <caret line="92" column="34" lean-forward="false" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -58,8 +55,8 @@
       <file leaf-file-name="dot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="96" column="85" lean-forward="false" selection-start-line="96" selection-start-column="85" selection-end-line="96" selection-end-column="85" />
+            <state relative-caret-position="355">
+              <caret line="97" column="27" lean-forward="false" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -67,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game_consts.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="game_consts.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game_consts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            <state relative-caret-position="476">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -130,8 +127,8 @@
         <option value="$PROJECT_DIR$/main_screen.py" />
         <option value="$PROJECT_DIR$/vectors_util.py" />
         <option value="$PROJECT_DIR$/dot.py" />
-        <option value="$PROJECT_DIR$/game_consts.py" />
         <option value="$PROJECT_DIR$/population.py" />
+        <option value="$PROJECT_DIR$/game_consts.py" />
       </list>
     </option>
   </component>
@@ -317,6 +314,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="97" column="27" lean-forward="false" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/terrain.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -325,32 +332,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game_consts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="96" column="85" lean-forward="false" selection-start-line="96" selection-start-column="85" selection-end-line="96" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/population.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
-          <caret line="92" column="30" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+          <caret line="92" column="34" lean-forward="false" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>

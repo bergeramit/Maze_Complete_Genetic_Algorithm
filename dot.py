@@ -92,12 +92,10 @@ class Dot:
 
     def calculate_fitness(self):
         if self.is_arrived():
-            self.fitness = (1 + (20 / self.step)) * 10
-        elif not self.above_terrain():
-            self.fitness = ((1 / self.distance_from_upper_place()) + (20 / self.step))
+            self.fitness = (1 + (1 / self.step))
         else:
             #print("Distances: {}".format(self.position.calculate_distance(TARGET_POINT)))
-            self.fitness = ((1 / self.position.calculate_distance(TARGET_POINT)) + (20 / self.step)) * 10
+            self.fitness = (1 / math.pow(self.position.calculate_distance(TARGET_POINT), 2) + (1 / self.step))
 
 
 

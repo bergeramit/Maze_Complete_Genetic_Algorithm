@@ -8,8 +8,8 @@ BEST_DOT_COLOR = [0, 255, 0]
 TERRAIN_COLOR = [0, 0, 255]
 
 DOT_COLOR = [0, 0, 0]
-DOT_HEIGHT = 5
-DOT_WIDTH = 5
+DOT_HEIGHT = 7
+DOT_WIDTH = 7
 DOT_START_X_POSITION = 300
 DOT_START_Y_POSITION = 500
 SIZE_OF_POPULATION = 1000
@@ -24,6 +24,7 @@ LEFT_SPACE = Vector(60, 160)
 RIGHT_SPACE = Vector(680, 180)
 
 TERRAIN = {'board': Terrain(0, 0, BACKGROUND_SIZE[0], BACKGROUND_SIZE[1], BACKGROUND_COLOR), \
-           'block': Terrain(150, 200, 300, 30, TERRAIN_COLOR), \
-           'target_dot': Terrain(300, 20, 5, 5, TARGET_COLOR)}
+           'block': Terrain(0, 200, 300, 30, TERRAIN_COLOR), \
+           'block2': Terrain(200, 400, 600, 30, TERRAIN_COLOR), \
+           'target_dot': Terrain(300, 20, DOT_HEIGHT, DOT_HEIGHT, TARGET_COLOR)}
 
