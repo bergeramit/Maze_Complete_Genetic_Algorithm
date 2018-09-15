@@ -20,7 +20,7 @@ def update_position(current_position, current_velocity, time_elapsed):
 
 
 def get_random_direction_vector():
-    return Vector((random.random() - 0.5) * 2, (random.random() - 0.5) * 2)
+    return Vector(random.uniform(-1, 1), random.uniform(-1, 1))
 
 
 class Vector:
